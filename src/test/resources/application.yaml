@@ -1,0 +1,11 @@
+spring:
+  mongodb:
+    embedded:
+      version: "5.0.5"
+      storage:
+        repl-set-name: rs0
+        oplogSize: 10
+
+logging:
+  level:
+    de.flapdoodle: TRACE
