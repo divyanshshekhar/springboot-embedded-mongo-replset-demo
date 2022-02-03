@@ -5,6 +5,7 @@ import com.dsgaur.spring.embedded.demo.data.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -12,6 +13,7 @@ import javax.validation.constraints.NotNull;
 
 @RestController
 @RequestMapping(path = "/")
+@Transactional
 public class PersonsService {
 
     private final PersonRepository personRepository;
