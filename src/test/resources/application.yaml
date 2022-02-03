@@ -8,4 +8,5 @@ spring:
 
 logging:
   level:
-    de.flapdoodle: TRACE
+    ROOT: ERROR
+    com.dsgaur.spring.embedded.demo: DEBUG
