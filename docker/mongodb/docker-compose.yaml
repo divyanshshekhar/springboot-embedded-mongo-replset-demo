@@ -2,7 +2,9 @@ version: '3.7'
 
 services:
   mongo:
-    image: mongo:5.0.5-focal
+    build:
+      dockerfile: Dockerfile
+      context: .
     container_name: demo-mongo
     ports:
       - "27017:27017"
