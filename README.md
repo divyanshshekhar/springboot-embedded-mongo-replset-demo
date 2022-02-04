@@ -10,12 +10,13 @@ To run the tests, flapdoodle's embedded mongo has been added as dependency with 
 
 ## Understanding the demo project
 
-1. Checkout the medium article at [https://dsgaur.medium.com/how-to-enable-replica-set-in-embbedded-mongo-with-spring-boot-ddeaa079c1c8](https://dsgaur.medium.com/how-to-enable-replica-set-in-embbedded-mongo-with-spring-boot-ddeaa079c1c8)
+1. Checkout the medium article
+   at [https://dsgaur.medium.com/how-to-enable-replica-set-in-embbedded-mongo-with-spring-boot-ddeaa079c1c8](https://dsgaur.medium.com/how-to-enable-replica-set-in-embbedded-mongo-with-spring-boot-ddeaa079c1c8)
 2. The source code should be easy to understand. Necessary comments are provided where needed.
 3. Commit messages are descriptive. Check the full commit message (not only the first line). They explain the changes in
    paragraph.
-3. The git commits are tagged so that you can jump to various stages of the implementation as explained above. The git
-   tags are in following order:
+3. The git commits are tagged so that you can jump to various stages of the implementation as explained in the article.
+   The git tags are in following order:
     1. **basic-service-with-tests**: Basic service implementation (with Junit tests) without using mongo transactions.
     2. **mongo-txn-with-failing-tests**: Enabled mongo transactions in the service but now the test cases fails due to
        lack of replica set in embedded mongo
@@ -53,4 +54,5 @@ Run following command from root project directory:
 ```bash
 mvn clean test
 ```
+
 Note: Unit tests don't need running your application or the mondodb container. They are in fact "unit tests".
