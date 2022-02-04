@@ -1,11 +1,9 @@
 package com.dsgaur.spring.embedded.demo.tests.config;
 
-import com.dsgaur.spring.embedded.demo.config.ApplicationConfig;
 import com.mongodb.client.MongoClient;
 import org.bson.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
@@ -15,7 +13,6 @@ import java.util.concurrent.TimeUnit;
 import static org.awaitility.Awaitility.await;
 
 @Configuration
-@AutoConfigureBefore(ApplicationConfig.class)
 public class UnitTestsConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(UnitTestsConfig.class);
@@ -46,7 +43,7 @@ public class UnitTestsConfig {
             boolean currentIsMaster = (boolean) mongoClient
                     .getDatabase(adminDb)
                     .runCommand(new Document("isMaster",
-                    1)).get("ismaster");
+                            1)).get("ismaster");
             if (!currentIsMaster) {
                 logger.debug("Replica set is not ready. Waiting for node to become master.");
             } else {
