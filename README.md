@@ -8,7 +8,7 @@ calls the PersonsService's delete method to delete the person, and checks if the
 <br/>
 To run the tests, flapdoodle's embedded mongo has been added as dependency with test scope.
 
-## How to understand the demo project
+## Understanding the demo project
 
 1. Checkout the medium article at [https://dsgaur.medium.com/how-to-enable-replica-set-in-embbedded-mongo-with-spring-boot-ddeaa079c1c8](https://dsgaur.medium.com/how-to-enable-replica-set-in-embbedded-mongo-with-spring-boot-ddeaa079c1c8)
 2. The source code should be easy to understand. Necessary comments are provided where needed.
